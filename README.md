@@ -8,14 +8,33 @@
 
 # Emaily
 
-Fullstack (React/Node) Application Deployed on AWS
+Fullstack (React/Node) Application that charges user for credits. From the credits user being charged, they can send out list of their custom-made surveys.
 
 ## Getting Started
 
-- You need [Node.js](https://nodejs.org/en/download/) to run this
+- You can find link to the project domain [here](https://enigmatic-lowlands-92572.herokuapp.com/)
+
+### Test Credit Card Number for [Stripe](https://stripe.com/ca).
+
+> Email: Anything
+
+> Credit Card Number: 4242 4242 4242 4242
+
+> Exp. Day: Anything
+
+> CSC: Anything
 
 ### Run the project
 
+- Clone the repository
+```
+git clone https://github.com/vicecarloans/React-Node-AWS-deployment
+```
+- Install Dependencies
+```
+npm install
+```
+- Run Dev Server
 ```
 npm run dev
 ```
