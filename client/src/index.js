@@ -4,8 +4,10 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import reduxThunk from 'redux-thunk'
 import App from './components/App'
-import reducers from './reducers'
+import axios from 'axios'
 
+import reducers from './reducers'
+window.axios = axios
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = composeEnhancers(

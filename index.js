@@ -5,6 +5,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/key');
 require('./models/User');
+require('./models/Surveys');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -21,9 +22,10 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+// Route hookup
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
-
+require('./routes/surveyRoutes')(app);
 if(process.env.NODE_ENV === 'production'){
     // Express will serve up production assets, main.js, main.css
     app.use(express.static('client/build'));
